@@ -8,7 +8,7 @@ password = sys.argv[1]
 is_valid = False
 
 # Do all the requirement checks here.
-print(password)
+#print(password)
 lower= False
 upper = False
 numb = False
@@ -24,10 +24,15 @@ for n in password:
     elif n=="$" or n=="#" or n=="@":
         special= True
     
-if len(password)> 5 and len(password)<17:
+if len(password)>=6 and len(password)<=16:
     minmax=True
-    
-
-if lower == True and upper == True and numb == True and special == True and minmax== True:
+"""     
+print(lower)
+print(upper)
+print(numb)
+print(special)
+print(minmax)
+ """
+if lower and upper and numb and special  and minmax:
     is_valid = True
 print(is_valid)
